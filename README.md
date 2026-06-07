@@ -5,9 +5,9 @@
 **Student:** Olha Sorych  
 **Issue:** [[GitHub issue link] ](https://github.com/ddeva6/friday/issues/15)  
 **Status:** Phase I  Complete  
-            Phase II In Progress  
-            Phase III In Progress  
-            Phase IV In Progress  
+******* Phase II In Progress  
+******* Phase III In Progress  
+******* Phase IV In Progress  
 
 ---
 
