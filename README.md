@@ -1,4 +1,4 @@
-# Contribution [#1]: Add dark/light theme toggle
+# Contribution #1: Add dark/light theme toggle
 
 
 **Contribution Number:** 1  
