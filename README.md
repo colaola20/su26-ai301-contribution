@@ -1,35 +1,40 @@
-# Contribution [#]: [Issue Title]
+# Contribution [#1]: Add dark/light theme toggle
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** Olha Sorych
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+
+**Contribution Number:** 1  
+**Student:** Olha Sorych  
+**Issue:** [[GitHub issue link] ](https://github.com/ddeva6/friday/issues/15)  
+**Status:** Phase I  Complete  
+            Phase II In Progress  
+            Phase III In Progress  
+            Phase IV In Progress  
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+The issue and the final expectations are clear. The tech stack is familiar to me or I worked with it in the past. The documentation is present and include information about the app, contribution guide, and steps how to start with installation. The amout of work seamce to be managebla with the duration of the assignment. The issue is new and was posted few hours ago, so nobody has claimed it yet. The author seams to be activly working on the project.
 
 ---
 
 ## Understanding the Issue
+Adding dark/light theme toggle btton to the header bar, defining new css variables needed to support dark/light theme toggling, save user theme preference into local storage for persistency, and set dark theme as a default.
 
 ### Problem Description
 
-[In your own words, what's broken or missing?]
+It's a new feature that creator of the project like to add.
 
 ### Expected Behavior
 
-[What should happen?]
+The dark/light theme toggle should switche the app's theme from dark to light and light to dark when pressed.
 
 ### Current Behavior
 
-[What actually happens?]
+Currently the app doesn't have drk/light theme toggle button.
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
+A new toggle component needs to be added which will affect others app's components such as chart's, backgraund, text, up/down colors.
 
 ---
 
