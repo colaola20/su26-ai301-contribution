@@ -5,7 +5,7 @@
 **Student:** Olha Sorych  
 **Issue:** [[GitHub issue link] ](https://github.com/MittalKeshav/Aroha/issues/10)  
 **Status:** Phase I  Complete  
-******* Phase II Complete 
+******* Phase II Complete  
 ******* Phase III In Progress  
 ******* Phase IV In Progress  
 
