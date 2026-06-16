@@ -55,7 +55,8 @@ I forked and than cloned the repository. Than I followed the instranction from R
 ### Reproduction Evidence
 
 - **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** <img width="1512" height="982" alt="Screenshot 2026-06-16 at 9 44 14 PM" src="https://github.com/user-attachments/assets/9ce3f886-338e-4538-b392-4f6b7e4eef62" />
+- **Screenshots/logs:** <img width="1499" height="827" alt="Screenshot 2026-06-16 at 9 44 14 PM" src="https://github.com/user-attachments/assets/ad771087-1469-4b3e-bbec-dc95951a2081" />
+
 
 - **My findings:** [What you discovered during reproduction]
 
