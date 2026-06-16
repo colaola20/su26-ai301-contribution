@@ -54,7 +54,7 @@ I forked and than cloned the repository. Than I followed the instranction from R
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [Link to commit in your fork]
+- **Commit showing reproduction:** [[Link to commit in your fork]](https://github.com/colaola20/Aroha)  
 - **Screenshots/logs:** 
 https://github.com/user-attachments/assets/bc30c95a-b374-4d14-9cd5-ea215ddf3855
 
@@ -94,9 +94,11 @@ TasksContext.tsx already centralizes shared state with the useState + useEffect 
 
 **Implement:** [Link to your branch/commits as you work]
 
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+**Review:** 
+No CONTRIBUTING.md exists in the repo, so I'll follow the conventions visible in git log — short, lowercase, imperative summaries describing the fix (e.g. "logout issue fixed", "time save fix"), and reference issue #10 in the PR. I'll self-check that no hardcoded quote can ever render and that the page still works when quote is null.  
 
-**Evaluate:** [How will you verify it works?]
+**Evaluate:**
+There's no test framework configured (no test script, no jest/vitest/playwright), so verification will be manual: hard-refresh the Today tab and switch tabs repeatedly, confirming only one quote ever appears (skeleton → quote, no flash, no re-fetch). 
 
 ---
 
