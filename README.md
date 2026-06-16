@@ -55,10 +55,10 @@ I forked and than cloned the repository. Than I followed the instranction from R
 ### Reproduction Evidence
 
 - **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** <img width="1499" height="827" alt="Screenshot 2026-06-16 at 9 44 14 PM" src="https://github.com/user-attachments/assets/ad771087-1469-4b3e-bbec-dc95951a2081" />
+- **Screenshots/logs:** 
+https://github.com/user-attachments/assets/bc30c95a-b374-4d14-9cd5-ea215ddf3855
 
-
-- **My findings:** [What you discovered during reproduction]
+- **My findings:** I was able to confirm that an issue exists just as it's described in issue's description.  
 
 ---
 
