@@ -66,24 +66,31 @@ https://github.com/user-attachments/assets/bc30c95a-b374-4d14-9cd5-ea215ddf3855
 
 ### Analysis
 
-[Your analysis of the root cause - what's causing the issue?]
+In src/app/page.tsx quate is set to hardcoded value "Focus is not about saying yes to the things you have to do. It's about saying no to the hundreds of other good ideas that there are." instead of null. Before useEffect fetches a random values, the hardcoded one is being displayed causing a glitch. The fetching of the quate depennds on todayISO which is also being redered using useEffect delaying quate's fetching time even further. Another problem is that quate logic lives in page-local component state which mounts/unmount on every tab navigation, so quate's fetching re-runs everytime, changing the quate.
 
 ### Proposed Solution
 
-[High-level description of your fix approach]
+- move all quate fetching logic into src/context/TasksContext.tsx, so it will render only once and will be preserved through tab navigation.  
+- initialize quate with null instaed of hardcoded value, so the React will know that it's not fetched yet.  
+- Since fetching a quate is connected to todayISO value, all its setting logic needs to be moved to src/context/TasksContext.tsx as well.  
+- in src/app/page.tsx instead of fetching quate, it will be pulled from useTasks() from src/context/TasksContext.tsx  
+- When Today page is rendered and quate is null, an empty string will be shown until the random quate is fetched.  
 
 ### Implementation Plan
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** 
+On loading/refreshing the Today tab, a hardcoded quote ("Focus is not about saying yes…") flashes for a half second before a fetched random quote replaces it, which looks glitchy. The user should see exactly one quote — a skeleton/blank while it loads, then the real quote.  
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** 
+TasksContext.tsx already centralizes shared state with the useState + useEffect + localStorage pattern and exposes it via useTasks(). The quote should follow that same provider-owned pattern so it persists across navigation, just like tasks and userProfile.  
 
-**Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+**Plan:** 
+- in TasksContext.tsx, add a quote state initialized to null  
+- fetch it once in a useEffect([todayISO]), and expose it through the provider  
+- In page.tsx, remove the local useState (:11) and quote useEffect (:63-74)  
+- read quote from useTasks() and render an empty string while it's null  
 
 **Implement:** [Link to your branch/commits as you work]
 
