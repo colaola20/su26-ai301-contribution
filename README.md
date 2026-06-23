@@ -6,7 +6,7 @@
 **Issue:** [[GitHub issue link] ](https://github.com/MittalKeshav/Aroha/issues/10)  
 **Status:** Phase I  Complete  
 ******* Phase II Complete  
-******* Phase III In Progress  
+******* Phase III Complete 
 ******* Phase IV In Progress  
 
 ---
@@ -92,7 +92,16 @@ TasksContext.tsx already centralizes shared state with the useState + useEffect 
 - In page.tsx, remove the local useState (:11) and quote useEffect (:63-74)  
 - read quote from useTasks() and render an empty string while it's null  
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:**  
+**What was built:** Moved the daily motivational quote out of the home page and into the global `TasksContext` provider, so the quote is fetched **once per session** and shared across the whole app instead of being re-fetched on every mount of the home page.  
+The quote state starts as `null` (a genuine "loading" state) instead of a hardcoded string. While it is `null`, the banner renders **no quote text at all**, so the user no longer sees one quote flash and then get replaced by another (the original "glitch").  
+On a failed fetch, the quote falls back to a `DEFAULT_QUOTE` constant so the banner is never left permanently blank.
+
+**Challenges Faced:** The original quote effect was keyed on `todayISO`, but that value was set once on mount and never changed, so the dependency wasn't producing a daily refresh — it was just a "wait for the client" gate. I confirmed this before removing it so behavior was preserved, then surfaced the option of a true per-day quote separately.
+
+**Testing Strategy:** This was a UI/state-management change, so validation was a mix of static checks and live observation rather than new unit tests.
+
+**Branch Link:** https://github.com/colaola20/Aroha/tree/fix-issue-10
 
 **Review:** 
 No CONTRIBUTING.md exists in the repo, so I'll follow the conventions visible in git log — short, lowercase, imperative summaries describing the fix (e.g. "logout issue fixed", "time save fix"), and reference issue #10 in the PR. I'll self-check that no hardcoded quote can ever render and that the page still works when quote is null.  
@@ -104,20 +113,18 @@ There's no test framework configured (no test script, no jest/vitest/playwright)
 
 ## Testing Strategy
 
-### Unit Tests
+**Static validation:**
+- `npm run build` — **passed**; TypeScript compiled cleanly (the `string | null` change typechecks) and all routes generated.
+- `npm run lint` — the repo has 38 pre-existing lint errors across many files; **the change introduced zero new lint errors** (the quote code is not flagged).
 
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
+**Live validation (Playwright against the running dev server):**
+- **Invisible while loading:** at first paint the quote `<p>` is absent from the DOM (`hasQuoteP: false`) — no skeleton, no placeholder text.
+- **Quote appears after fetch:** the banner populated with the fetched quote once the request resolved.
+- **Generated once:** the `quotes/random` endpoint was hit **exactly once** on mount.
+- **No flash in SSR output:** inspected the server-rendered HTML with `curl` and confirmed the default quote string is not present on first paint (consistent with `quote` starting `null`).
+- **Shared across the app:** the provider sits in the root layout, so SPA navigation does not remount it and the quote is not re-fetched.
 
-### Integration Tests
-
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
-
-### Manual Testing
-
-[What you tested manually and results]
+**Not yet exercised:** the offline fallback to `DEFAULT_QUOTE` — the live network fetch succeeded during testing, so the `.catch` path was confirmed by code inspection only.
 
 ---
 
