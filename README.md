@@ -130,33 +130,27 @@ There's no test framework configured (no test script, no jest/vitest/playwright)
 
 ## Implementation Notes
 
-### Week [X] Progress
-
-[What you built this week, challenges faced, decisions made]
-
-### Week [Y] Progress
-
-[Continue documenting as you work]
-
 ### Code Changes
 
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+- **Files modified:** src/app/page.tsx and src/context/TasksContext.tsx  
+- **Key commits:** [[Links to important commits]](https://github.com/colaola20/Aroha/commit/29860c44ee1c0eb4ebf8776f2785c779a3edcfc2)
+- **Approach decisions:** This approach was mentioned by a team member as prefered.
 
 ---
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
+**PR Link:** [[GitHub PR URL when submitted]](https://github.com/MittalKeshav/Aroha/pull/12)
 
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
+**PR Title:** Move daily quote into TasksContext, so it's fetched once.  
+**PR Description:** The quote previosly lived in page.tsx and refetched on evry mount. Moving it into the TasksContext fetches it once and shares it app-wide. Starts as null so no placeholder text flashes before fetch resolves and falls back to a default quote on error. Closes #10
 
 **Maintainer Feedback:**
 - [Date]: [Summary of feedback received]
 - [Date]: [How you addressed it]
 
-**Status:** [Awaiting review / Iterating / Approved / Merged]
+**Status:** Awaiting review  
+[Awaiting review / Iterating / Approved / Merged]
 
 ---
 
