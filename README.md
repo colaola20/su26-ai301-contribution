@@ -7,7 +7,7 @@
 **Status:** Phase I  Complete  
 ******* Phase II Complete  
 ******* Phase III Complete 
-******* Phase IV In Progress  
+******* Phase IV Complete
 
 ---
 
@@ -146,10 +146,14 @@ There's no test framework configured (no test script, no jest/vitest/playwright)
 **PR Description:** The quote previosly lived in page.tsx and refetched on evry mount. Moving it into the TasksContext fetches it once and shares it app-wide. Starts as null so no placeholder text flashes before fetch resolves and falls back to a default quote on error. Closes #10
 
 **Maintainer Feedback:**
+Unfortunatly, the mainer hasn't left any feedback yet. I reached out to check in and see if they can give me any feedback.
 - [Date]: [Summary of feedback received]
 - [Date]: [How you addressed it]
 
 **Status:** Awaiting review  
+Current Status: Iterating
+It was reviewed by AI and passed all the checks but needed to be manualy review by maintainer and merge.
+
 [Awaiting review / Iterating / Approved / Merged]
 
 ---
@@ -158,7 +162,7 @@ There's no test framework configured (no test script, no jest/vitest/playwright)
 
 ### Technical Skills Gained
 
-[What you learned technically]
+I learned how to find a good repository to contribute to, how to comunicate with a maintainer, and how to claim the issue that you are plaining to work on. Additionally, I reviewed my React skils specificaly React hooks such as UseEffect, useState, and how to initialize the context of the app on mount.
 
 ### Challenges Overcome
 
