@@ -6,7 +6,7 @@
 **Issue:** [[GitHub issue link] ](https://github.com/MittalKeshav/Aroha/issues/10)  
 **Status:** Phase I  Complete  
 ******* Phase II Complete  
-******* Phase III Complete 
+******* Phase III Complete  
 ******* Phase IV Complete
 
 ---
