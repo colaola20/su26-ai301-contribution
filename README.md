@@ -166,11 +166,11 @@ I learned how to find a good repository to contribute to, how to comunicate with
 
 ### Challenges Overcome
 
-[What was hard and how you solved it]
+The hardest was to pick the right issue. I tried to picked something with familiar stack, but good issues were gone so quickly. The first I picked, someone posted a solution for in 30 minutes after. I even didn't know they were working on it since they didn't leave any comments on the issue page. Even to find a good issue was hard not to mention get to work on it.
 
 ### What I'd Do Differently Next Time
 
-[Reflection on your process]
+Hopefully next time it will be easier to pick an issue since I have an expirience of picking one already. I think I did well this time, so I'm just gonna try to practice using the same strategy.
 
 ---
 
