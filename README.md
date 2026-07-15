@@ -1,8 +1,8 @@
 # Contribution #2: Refinements to home page design #757
 
-**Contribution Number:** 2
-**Student:** Olha Sorych 
-**Issue:** [[GitHub issue link]  ](https://github.com/codeforboston/home-energy-analysis-tool/issues/757)
+**Contribution Number:** 2  
+**Student:** Olha Sorych  
+**Issue:** [[GitHub issue link]  ](https://github.com/codeforboston/home-energy-analysis-tool/issues/757)  
 **Status:** Phase I  Complete  
 ******* Phase II In Progress  
 ******* Phase III In Progress  
